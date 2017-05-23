@@ -13,14 +13,7 @@ function Employee(employee) {
   };
 
 
-// TRY TO REFACTOR THIS.
-  Employee.prototype.averageSales = function(){
-    totalSales = this.sales.reduce(add, 0);
-    function add(a, b){
-      return a + b;
-    };
-    return totalSales / this.sales.length
-  };
-
-
-
+Employee.prototype.averageSales = function(){
+  var totalSales = this.totalSales()
+  return totalSales / this.sales.length
+}
